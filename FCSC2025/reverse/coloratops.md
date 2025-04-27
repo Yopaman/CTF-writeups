@@ -8,6 +8,7 @@ The binary is a linux graphical program using the [SDL](https://www.libsdl.org/)
 The first thing we can note is that only some characters are allowed : `'F'`, `'C'`, `'S'`, `'C'`, `'{'`, `'}'` and hexadecimal characters, which probably means the right password is the flag, and the flag is in the format `FCSC{[some hex chars]}`. Hex chars are displayed in different colors, and the colors seems to change depending on the text input.
 
 <details><summary>here is a shell.nix for my NixOS friends</summary>
+	
 ```nix
 with import <nixpkgs> { };
 mkShell {
@@ -21,6 +22,7 @@ mkShell {
   NIX_LD = lib.fileContents "${stdenv.cc}/nix-support/dynamic-linker";
 }
 ```
+
 </details>
 
 ![The main window of the program](./img/img1.png)
