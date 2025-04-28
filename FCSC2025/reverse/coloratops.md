@@ -13,11 +13,11 @@ The first thing we can note is that only some characters are allowed : `'F'`, `'
 with import <nixpkgs> { };
 mkShell {
   NIX_LD_LIBRARY_PATH = lib.makeLibraryPath [
-    stdenv.cc.cc
     openssl
     SDL2
     SDL2_ttf
     SDL2_image
+    nix-ld
   ];
   NIX_LD = lib.fileContents "${stdenv.cc}/nix-support/dynamic-linker";
 }
